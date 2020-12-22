@@ -11,7 +11,7 @@ const config = {
 
 var T = new Twit(config);
 //const timeout = Math.floor((Math.random())*50000000)
-const timeout = 3000
+const timeout = 1000
 console.log(timeout);
 let counter = 1;
 
