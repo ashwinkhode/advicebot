@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "node-fetch": "^2.6.0",
+    "discord.js": "^12.5.1",
+    "node-fetch": "^2.6.1",
     "twit": "^2.2.11"
   }
 }
