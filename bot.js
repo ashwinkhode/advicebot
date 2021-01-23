@@ -22,10 +22,12 @@ const discordConfig = {
 var T = new Twit(config);
 
 client.on('message', msg => {
+    if (msg.channel === 'twitter') {
+        T.post('statuses/update', {status: msg.content}, function (err, data, res) {
+            console.log(data)
+        })
 
-    T.post('statuses/update', {status: msg.content}, function (err, data, res) {
-        console.log(data)
-    })
+    }
 
 })
 
