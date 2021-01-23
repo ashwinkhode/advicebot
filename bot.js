@@ -22,9 +22,11 @@ const discordConfig = {
 var T = new Twit(config);
 
 client.on('message', msg => {
-    if (msg.content === 'ping') {
-        msg.reply('pong')
-    }
+
+    T.post('statuses/update', {status: msg.content}, function (err, data, res) {
+        console.log(data)
+    })
+
 })
 
 client.login(discordConfig.token)
